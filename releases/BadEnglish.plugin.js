@@ -4,8 +4,8 @@
  * @authorLink undefined
  * @donate undefined
  * @patreon undefined
- * @website https://github.com/ayes-web/betterDiscordPlugins/blob/plugins/badEnglish
- * @source https://github.com/ayes-web/betterDiscordPlugins/blob/releases/badEnglish/badEnglish.plugin.js
+ * @website https://github.com/ayes-web/betterDiscordPlugins/tree/main/plugins/BadEnglish
+ * @source https://raw.githubusercontent.com/ayes-web/betterDiscordPlugins/main/releases/BadEnglish.plugin.js
  */
 /*@cc_on
 @if (@_jscript)
@@ -32,7 +32,7 @@
 @else@*/
 
 module.exports = (() => {
-    const config = {"info":{"name":"badEnglish","authors":[{"name":"ayes","discord_id":"824219499925471262","github_username":"ayes-web"}],"version":"1.0.0","description":"Appends '(Sorry for bad English)' to discord message.","github":"https://github.com/ayes-web/betterDiscordPlugins/blob/plugins/badEnglish","github_raw":"https://github.com/ayes-web/betterDiscordPlugins/blob/releases/badEnglish/badEnglish.plugin.js","invite":"FaMypurueF"},"main":"index.js"};
+    const config = {"info":{"name":"badEnglish","authors":[{"name":"ayes","discord_id":"824219499925471262","github_username":"ayes-web"}],"version":"1.0.0","description":"Appends '(Sorry for bad English)' to discord message.","github":"https://github.com/ayes-web/betterDiscordPlugins/tree/main/plugins/BadEnglish","github_raw":"https://raw.githubusercontent.com/ayes-web/betterDiscordPlugins/main/releases/BadEnglish.plugin.js","invite":"FaMypurueF"},"main":"index.js"};
 
     return !global.ZeresPluginLibrary ? class {
         constructor() {this._config = config;}
