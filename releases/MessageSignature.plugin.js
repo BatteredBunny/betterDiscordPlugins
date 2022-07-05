@@ -32,7 +32,7 @@
 @else@*/
 
 module.exports = (() => {
-    const config = {"info":{"name":"MessageSignature","authors":[{"name":"ayes","discord_id":"824219499925471262","github_username":"ayes-web"}],"version":"1.0.0","description":"Can append or prepend to any message you send","github":"https://github.com/ayes-web/betterDiscordPlugins/tree/main/plugins/MessageSignature","github_raw":"https://raw.githubusercontent.com/ayes-web/betterDiscordPlugins/main/releases/MessageSignature.plugin.js","invite":"FaMypurueF"},"main":"index.js"};
+    const config = {"info":{"name":"MessageSignature","authors":[{"name":"ayes","discord_id":"824219499925471262","github_username":"ayes-web"}],"version":"1.0.0","description":"Appends or prepends any text to your messages.","github":"https://github.com/ayes-web/betterDiscordPlugins/tree/main/plugins/MessageSignature","github_raw":"https://raw.githubusercontent.com/ayes-web/betterDiscordPlugins/main/releases/MessageSignature.plugin.js","invite":"FaMypurueF"},"main":"index.js"};
 
     return !global.ZeresPluginLibrary ? class {
         constructor() {this._config = config;}
