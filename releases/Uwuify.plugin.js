@@ -1,11 +1,11 @@
 /**
- * @name BadEnglish
+ * @name Uwuify
  * @invite undefined
  * @authorLink undefined
  * @donate undefined
  * @patreon undefined
- * @website https://github.com/ayes-web/betterDiscordPlugins/tree/main/plugins/BadEnglish
- * @source https://raw.githubusercontent.com/ayes-web/betterDiscordPlugins/main/releases/BadEnglish.plugin.js
+ * @website https://github.com/ayes-web/betterDiscordPlugins/tree/main/plugins/Uwuify
+ * @source https://raw.githubusercontent.com/ayes-web/betterDiscordPlugins/main/releases/Uwuify.plugin.js
  */
 /*@cc_on
 @if (@_jscript)
@@ -32,7 +32,7 @@
 @else@*/
 
 module.exports = (() => {
-    const config = {"info":{"name":"BadEnglish","authors":[{"name":"ayes","discord_id":"824219499925471262","github_username":"ayes-web"}],"version":"1.0.0","description":"Appends '(Sorry for bad English)' to discord message.","github":"https://github.com/ayes-web/betterDiscordPlugins/tree/main/plugins/BadEnglish","github_raw":"https://raw.githubusercontent.com/ayes-web/betterDiscordPlugins/main/releases/BadEnglish.plugin.js","invite":"FaMypurueF"},"main":"index.js"};
+    const config = {"info":{"name":"Uwuify","authors":[{"name":"ayes","discord_id":"824219499925471262","github_username":"ayes-web"}],"version":"1.0.0","description":"Uwufies messages sent","github":"https://github.com/ayes-web/betterDiscordPlugins/tree/main/plugins/Uwuify","github_raw":"https://raw.githubusercontent.com/ayes-web/betterDiscordPlugins/main/releases/Uwuify.plugin.js","invite":"FaMypurueF"},"main":"index.js"};
 
     return !global.ZeresPluginLibrary ? class {
         constructor() {this._config = config;}
@@ -57,7 +57,7 @@ module.exports = (() => {
     } : (([Plugin, Api]) => {
         const plugin = (Plugin, Library) => {
     const {Patcher, Logger, DiscordModules} = Library;
-    return class BadEnglishPlugin extends Plugin {
+    return class UwuifyPlugin extends Plugin {
         onStart() {
             Logger.log("Starting");
             Patcher.after(
@@ -74,7 +74,11 @@ module.exports = (() => {
 
         append_to_message(channel, msg_info, send_status) {
             const [channel_id, msg, ..._] = msg_info;
-            msg.content += " (Sorry for bad English)";
+            msg.content = this.uwuify(msg.content);
+        }
+
+        uwuify(text) {
+            return text.replaceAll(/[lr]/g, 'w').replaceAll(/[LR]/g, 'W');
         }
     }
 };

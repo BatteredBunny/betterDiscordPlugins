@@ -1,11 +1,11 @@
 /**
- * @name BadEnglish
+ * @name MessageSignature
  * @invite undefined
  * @authorLink undefined
  * @donate undefined
  * @patreon undefined
- * @website https://github.com/ayes-web/betterDiscordPlugins/tree/main/plugins/BadEnglish
- * @source https://raw.githubusercontent.com/ayes-web/betterDiscordPlugins/main/releases/BadEnglish.plugin.js
+ * @website https://github.com/ayes-web/betterDiscordPlugins/tree/main/plugins/MessageSignature
+ * @source https://raw.githubusercontent.com/ayes-web/betterDiscordPlugins/main/releases/MessageSignature.plugin.js
  */
 /*@cc_on
 @if (@_jscript)
@@ -32,7 +32,7 @@
 @else@*/
 
 module.exports = (() => {
-    const config = {"info":{"name":"BadEnglish","authors":[{"name":"ayes","discord_id":"824219499925471262","github_username":"ayes-web"}],"version":"1.0.0","description":"Appends '(Sorry for bad English)' to discord message.","github":"https://github.com/ayes-web/betterDiscordPlugins/tree/main/plugins/BadEnglish","github_raw":"https://raw.githubusercontent.com/ayes-web/betterDiscordPlugins/main/releases/BadEnglish.plugin.js","invite":"FaMypurueF"},"main":"index.js"};
+    const config = {"info":{"name":"MessageSignature","authors":[{"name":"ayes","discord_id":"824219499925471262","github_username":"ayes-web"}],"version":"1.0.0","description":"Can append or prepend to any message you send","github":"https://github.com/ayes-web/betterDiscordPlugins/tree/main/plugins/MessageSignature","github_raw":"https://raw.githubusercontent.com/ayes-web/betterDiscordPlugins/main/releases/MessageSignature.plugin.js","invite":"FaMypurueF"},"main":"index.js"};
 
     return !global.ZeresPluginLibrary ? class {
         constructor() {this._config = config;}
@@ -56,8 +56,23 @@ module.exports = (() => {
         stop() {}
     } : (([Plugin, Api]) => {
         const plugin = (Plugin, Library) => {
-    const {Patcher, Logger, DiscordModules} = Library;
-    return class BadEnglishPlugin extends Plugin {
+    const {Patcher, Logger, DiscordModules, Settings} = Library;
+    return class MessageSignaturePlugin extends Plugin {
+        constructor() {
+            super();
+            this.defaultSettings = {};
+
+            this.defaultSettings.prefix = "";
+            this.defaultSettings.suffix = " (Sorry for bad English)";
+        }
+
+        getSettingsPanel() {
+            return Settings.SettingPanel.build(this.saveSettings.bind(this),
+                new Settings.Textbox("Prefix", "Text to prepend to message", this.settings.prefix, (e) => {this.settings.prefix = e;}),
+                new Settings.Textbox("Suffix", "Text to append to message", this.settings.suffix, (e) => {this.settings.suffix = e;}),
+            );
+        }
+
         onStart() {
             Logger.log("Starting");
             Patcher.after(
@@ -74,7 +89,7 @@ module.exports = (() => {
 
         append_to_message(channel, msg_info, send_status) {
             const [channel_id, msg, ..._] = msg_info;
-            msg.content += " (Sorry for bad English)";
+            msg.content = this.settings.prefix + msg.content + this.settings.suffix;
         }
     }
 };

@@ -1,0 +1,16 @@
+{
+  "info": {
+    "name": "Uwuify",
+    "authors": [{
+      "name": "ayes",
+      "discord_id": "824219499925471262",
+      "github_username": "ayes-web"
+    }],
+    "version": "1.0.0",
+    "description": "Uwufies messages sent",
+    "github": "https://github.com/ayes-web/betterDiscordPlugins/tree/main/plugins/Uwuify",
+    "github_raw": "https://raw.githubusercontent.com/ayes-web/betterDiscordPlugins/main/releases/Uwuify.plugin.js",
+    "invite": "FaMypurueF"
+  },
+  "main": "index.js"
+}
