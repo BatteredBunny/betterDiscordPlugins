@@ -4,12 +4,12 @@
     "authors": [{
         "name": "ayes",
         "discord_id": "824219499925471262",
-        "github_username": "ayes-web"
+        "github_username": "BatteredBunny"
       }],
     "version": "1.0.0",
     "description": "Appends '(Sorry for bad English)' to discord message.",
-    "github": "https://github.com/ayes-web/betterDiscordPlugins/tree/main/plugins/BadEnglish",
-    "github_raw": "https://raw.githubusercontent.com/ayes-web/betterDiscordPlugins/main/releases/BadEnglish.plugin.js",
+    "github": "https://github.com/BatteredBunny/betterDiscordPlugins/tree/main/plugins/BadEnglish",
+    "github_raw": "https://raw.githubusercontent.com/BatteredBunny/betterDiscordPlugins/main/releases/BadEnglish.plugin.js",
     "invite": "FaMypurueF"
   },
   "main": "index.js"

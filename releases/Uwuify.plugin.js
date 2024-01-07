@@ -4,12 +4,12 @@
  * @authorLink undefined
  * @donate undefined
  * @patreon undefined
- * @website https://github.com/ayes-web/betterDiscordPlugins/tree/main/plugins/Uwuify
- * @source https://raw.githubusercontent.com/ayes-web/betterDiscordPlugins/main/releases/Uwuify.plugin.js
+ * @website https://github.com/BatteredBunny/betterDiscordPlugins/tree/main/plugins/Uwuify
+ * @source https://raw.githubusercontent.com/BatteredBunny/betterDiscordPlugins/main/releases/Uwuify.plugin.js
  */
 /*@cc_on
 @if (@_jscript)
-    
+
     // Offer to self-install for clueless users that try to run this directly.
     var shell = WScript.CreateObject("WScript.Shell");
     var fs = new ActiveXObject("Scripting.FileSystemObject");
@@ -32,7 +32,7 @@
 @else@*/
 
 module.exports = (() => {
-    const config = {"info":{"name":"Uwuify","authors":[{"name":"ayes","discord_id":"824219499925471262","github_username":"ayes-web"}],"version":"1.0.0","description":"Uwufies messages sent","github":"https://github.com/ayes-web/betterDiscordPlugins/tree/main/plugins/Uwuify","github_raw":"https://raw.githubusercontent.com/ayes-web/betterDiscordPlugins/main/releases/Uwuify.plugin.js","invite":"FaMypurueF"},"main":"index.js"};
+    const config = {"info":{"name":"Uwuify","authors":[{"name":"ayes","discord_id":"824219499925471262","github_username":"BatteredBunny"}],"version":"1.0.0","description":"Uwufies messages sent","github":"https://github.com/BatteredBunny/betterDiscordPlugins/tree/main/plugins/Uwuify","github_raw":"https://raw.githubusercontent.com/BatteredBunny/betterDiscordPlugins/main/releases/Uwuify.plugin.js","invite":"FaMypurueF"},"main":"index.js"};
 
     return !global.ZeresPluginLibrary ? class {
         constructor() {this._config = config;}

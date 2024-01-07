@@ -4,12 +4,12 @@
  * @authorLink undefined
  * @donate undefined
  * @patreon undefined
- * @website https://github.com/ayes-web/betterDiscordPlugins/tree/main/plugins/MessageSignature
- * @source https://raw.githubusercontent.com/ayes-web/betterDiscordPlugins/main/releases/MessageSignature.plugin.js
+ * @website https://github.com/BatteredBunny/betterDiscordPlugins/tree/main/plugins/MessageSignature
+ * @source https://raw.githubusercontent.com/BatteredBunny/betterDiscordPlugins/main/releases/MessageSignature.plugin.js
  */
 /*@cc_on
 @if (@_jscript)
-    
+
     // Offer to self-install for clueless users that try to run this directly.
     var shell = WScript.CreateObject("WScript.Shell");
     var fs = new ActiveXObject("Scripting.FileSystemObject");
@@ -32,7 +32,7 @@
 @else@*/
 
 module.exports = (() => {
-    const config = {"info":{"name":"MessageSignature","authors":[{"name":"ayes","discord_id":"824219499925471262","github_username":"ayes-web"}],"version":"1.0.0","description":"Appends or prepends any text to your messages.","github":"https://github.com/ayes-web/betterDiscordPlugins/tree/main/plugins/MessageSignature","github_raw":"https://raw.githubusercontent.com/ayes-web/betterDiscordPlugins/main/releases/MessageSignature.plugin.js","invite":"FaMypurueF"},"main":"index.js"};
+    const config = {"info":{"name":"MessageSignature","authors":[{"name":"ayes","discord_id":"824219499925471262","github_username":"BatteredBunny"}],"version":"1.0.0","description":"Appends or prepends any text to your messages.","github":"https://github.com/BatteredBunny/betterDiscordPlugins/tree/main/plugins/MessageSignature","github_raw":"https://raw.githubusercontent.com/BatteredBunny/betterDiscordPlugins/main/releases/MessageSignature.plugin.js","invite":"FaMypurueF"},"main":"index.js"};
 
     return !global.ZeresPluginLibrary ? class {
         constructor() {this._config = config;}
